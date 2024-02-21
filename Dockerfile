@@ -1,1 +1,9 @@
-FROM python:3.10.11-bullseye
+FROM pip install --upgrade pip && \
+    pip install -r requirements.txt
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
